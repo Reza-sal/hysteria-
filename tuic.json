@@ -1,50 +1,50 @@
 {
   "log": {
-    "dis_ЯΞZΛ_bled": f_ЯΞZΛ_lse,
+    "disabled": false,
     "level": "info",
-    "timest_ЯΞZΛ_mp": true
+    "timestamp": true
   },
   "dns": {
     "servers": [
       {
-        "t_ЯΞZΛ_g": "proxyDns",
-        "_ЯΞZΛ_ddress": "1.1.1.1",
+        "tag": "proxyDns",
+        "address": "1.1.1.1",
         "detour": "select"
       },
       {
-        "t_ЯΞZΛ_g": "loc_ЯΞZΛ_lDns",
-        "_ЯΞZΛ_ddress": "https://223.5.5.5/dns-query",
+        "tag": "localDns",
+        "address": "https://223.5.5.5/dns-query",
         "detour": "direct"
       },
       {
-        "t_ЯΞZΛ_g": "block",
-        "_ЯΞZΛ_ddress": "rcode://success"
+        "tag": "block",
+        "address": "rcode://success"
       }
     ],
     "rules": [
             {
-                "dom_ЯΞZΛ_in_suffix": [
+                "domain_suffix": [
                     ".ir"
                 ],
                 "server": "dns-direct"
             },
 
       {
-        "server": "loc_ЯΞZΛ_lDns",
-        "outbound": "_ЯΞZΛ_ny",
-        "dis_ЯΞZΛ_ble_c_ЯΞZΛ_che": true
+        "server": "localDns",
+        "outbound": "any",
+        "disable_cache": true
       },
       {
-        "server": "loc_ЯΞZΛ_lDns",
-        "cl_ЯΞZΛ_sh_mode": "direct"
+        "server": "localDns",
+        "clash_mode": "direct"
       },
       {
         "server": "proxyDns",
-        "cl_ЯΞZΛ_sh_mode": "glob_ЯΞZΛ_l"
+        "clash_mode": "global"
       }
 
     ],
-    "str_ЯΞZΛ_tegy": "ipv4_only"
+    "strategy": "ipv4_only"
   },
   "inbounds": [
     {
@@ -54,16 +54,16 @@
       "listen_port": 1081
     },
     {
-      "st_ЯΞZΛ_ck": "system",
-      "_ЯΞZΛ_uto_route": true,
-      "inet4__ЯΞZΛ_ddress": "172.19.0.1/30",
+      "stack": "system",
+      "auto_route": true,
+      "inet4_address": "172.19.0.1/30",
       "mtu": 9000,
       "sniff": true,
       "strict_route": true,
       "type": "tun",
-      "pl_ЯΞZΛ_tform": {
+      "platform": {
         "http_proxy": {
-          "en_ЯΞZΛ_bled": true,
+          "enabled": true,
           "server": "127.0.0.1",
           "server_port": 1081
         }
@@ -72,55 +72,55 @@
   ],
   "outbounds": [
     {
-      "t_ЯΞZΛ_g": "select",
+      "tag": "select",
       "type": "selector",
       "outbounds": [
-        "_ЯΞZΛ_uto",
-        "_ЯΞZΛ_1",
-        "_ЯΞZΛ_2",
-        "_ЯΞZΛ_3",
-		"_ЯΞZΛ_4",
-		"_ЯΞZΛ_5",
-		"_ЯΞZΛ_6",
-		"_ЯΞZΛ_7",
-		"_ЯΞZΛ_8",
-    "_ЯΞZΛ_9",
-    "_ЯΞZΛ_10",
-    "_ЯΞZΛ_11",
-    "_ЯΞZΛ_12"
+        "auto",
+        "_𝓇𝑒𝓏𝒶_1",
+        "_𝓇𝑒𝓏𝒶_2",
+        "_𝓇𝑒𝓏𝒶_3",
+		"_𝓇𝑒𝓏𝒶_4",
+		"_𝓇𝑒𝓏𝒶_5",
+		"_𝓇𝑒𝓏𝒶_6",
+		"_𝓇𝑒𝓏𝒶_7",
+		"_𝓇𝑒𝓏𝒶_8",
+    "_𝓇𝑒𝓏𝒶_9",
+    "_𝓇𝑒𝓏𝒶_10",
+    "_𝓇𝑒𝓏𝒶_11",
+    "_𝓇𝑒𝓏𝒶_12"
       ]
     },
     {
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_uto",
+      "tag": "auto",
       "type": "urltest",
       "outbounds": [
-        "_ЯΞZΛ_1",
-        "_ЯΞZΛ_2",
-        "_ЯΞZΛ_3",
-		"_ЯΞZΛ_4",
-		"_ЯΞZΛ_5",
-		"_ЯΞZΛ_6",
-		"_ЯΞZΛ_7",
-		"_ЯΞZΛ_8",
-    "_ЯΞZΛ_9",
-    "_ЯΞZΛ_10",
-    "_ЯΞZΛ_11",
-    "_ЯΞZΛ_12"
+        "_𝓇𝑒𝓏𝒶_1",
+        "_𝓇𝑒𝓏𝒶_2",
+        "_𝓇𝑒𝓏𝒶_3",
+		"_𝓇𝑒𝓏𝒶_4",
+		"_𝓇𝑒𝓏𝒶_5",
+		"_𝓇𝑒𝓏𝒶_6",
+		"_𝓇𝑒𝓏𝒶_7",
+		"_𝓇𝑒𝓏𝒶_8",
+    "_𝓇𝑒𝓏𝒶_9",
+    "_𝓇𝑒𝓏𝒶_10",
+    "_𝓇𝑒𝓏𝒶_11",
+    "_𝓇𝑒𝓏𝒶_12"
 	  ],
-      "url": "https://www.gst_ЯΞZΛ_tic.com/gener_ЯΞZΛ_te_204",
-      "interv_ЯΞZΛ_l": "1m",
-      "toler_ЯΞZΛ_nce": 50
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
     },
     {
-      "t_ЯΞZΛ_g": "direct",
+      "tag": "direct",
       "type": "direct"
     },
     {
-      "t_ЯΞZΛ_g": "block",
+      "tag": "block",
       "type": "block"
     },
     {
-      "t_ЯΞZΛ_g": "dns-out",
+      "tag": "dns-out",
       "type": "dns"
     },
    
@@ -128,203 +128,203 @@
       "server": "147.45.76.99",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "cef1e7_ЯΞZΛ_47565b431",
+      "password": "cef1e7a47565b431",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "2c5ef5135559d4f5"
+        "type": "salamander",
+        "password": "2c5ef5135559d4f5"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_1",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_1",
+      "type": "hysteria2"
     },
     {
-      "server": "[2_ЯΞZΛ_12:5940:42c5::2]",
+      "server": "[2a12:5940:42c5::2]",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "cef1e7_ЯΞZΛ_47565b431",
+      "password": "cef1e7a47565b431",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "2c5ef5135559d4f5"
+        "type": "salamander",
+        "password": "2c5ef5135559d4f5"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_2",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_2",
+      "type": "hysteria2"
     },
     {        
 	  "server": "147.45.76.180",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "d209_ЯΞZΛ_78e3272cbeb",
+      "password": "d209a78e3272cbeb",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "b1752cdc49b48_ЯΞZΛ_29"
+        "type": "salamander",
+        "password": "b1752cdc49b48a29"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_3",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_3",
+      "type": "hysteria2"
     },
 	{
-      "server": "[2_ЯΞZΛ_12:5940:431d::2]",
+      "server": "[2a12:5940:431d::2]",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "d209_ЯΞZΛ_78e3272cbeb",
+      "password": "d209a78e3272cbeb",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "b1752cdc49b48_ЯΞZΛ_29"
+        "type": "salamander",
+        "password": "b1752cdc49b48a29"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_4",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_4",
+      "type": "hysteria2"
     },
 	{
       "server": "147.45.76.116",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "7929508208061157",
+      "password": "7929508208061157",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "6cc525_ЯΞZΛ_9_ЯΞZΛ_7_ЯΞZΛ_2eb6c"
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_5",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_5",
+      "type": "hysteria2"
     },
 	{
-      "server": "[2_ЯΞZΛ_12:5940:42d8::2]",
+      "server": "[2a12:5940:42d8::2]",
       "server_port": 443,
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true
       },
-      "p_ЯΞZΛ_ssword": "7929508208061157",
+      "password": "7929508208061157",
       "obfs": {
-        "type": "s_ЯΞZΛ_l_ЯΞZΛ_m_ЯΞZΛ_nder",
-        "p_ЯΞZΛ_ssword": "6cc525_ЯΞZΛ_9_ЯΞZΛ_7_ЯΞZΛ_2eb6c"
+        "type": "salamander",
+        "password": "6cc525a9a7a2eb6c"
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_6",
-      "type": "hysteri_ЯΞZΛ_2"
+      "tag": "_𝓇𝑒𝓏𝒶_6",
+      "type": "hysteria2"
     },
   {
       "server": "147.45.76.180",
       "server_port": 29393,
-      "uuid": "c3c8_ЯΞZΛ_581-25c3-41_ЯΞZΛ_8-95bd-0188f63748b9",
-    "p_ЯΞZΛ_ssword": "01e584f913b01c_ЯΞZΛ_8",
+      "uuid": "c3c8a581-25c3-41a8-95bd-0188f63748b9",
+    "password": "01e584f913b01ca8",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_7",
+      "tag": "_𝓇𝑒𝓏𝒶_7",
       "type": "tuic"
     },
   {
-      "server": "[2_ЯΞZΛ_12:5940:431d::2]",
+      "server": "[2a12:5940:431d::2]",
       "server_port": 29393,
-      "uuid": "c3c8_ЯΞZΛ_581-25c3-41_ЯΞZΛ_8-95bd-0188f63748b9",
-    "p_ЯΞZΛ_ssword": "01e584f913b01c_ЯΞZΛ_8",
+      "uuid": "c3c8a581-25c3-41a8-95bd-0188f63748b9",
+    "password": "01e584f913b01ca8",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_8",
+      "tag": "_𝓇𝑒𝓏𝒶_8",
       "type": "tuic"
     },
   {
       "server": "147.45.76.99",
       "server_port": 48282,
-      "uuid": "6801db4e-76d9-4_ЯΞZΛ_3e-_ЯΞZΛ_cdc-9ebdd1dd4e86",
-    "p_ЯΞZΛ_ssword": "c515252362b009f5",
+      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
+    "password": "c515252362b009f5",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_9",
+      "tag": "_𝓇𝑒𝓏𝒶_9",
       "type": "tuic"
     },
   {
-      "server": "[2_ЯΞZΛ_12:5940:42c5::2]",
+      "server": "[2a12:5940:42c5::2]",
       "server_port": 48282,
-      "uuid": "6801db4e-76d9-4_ЯΞZΛ_3e-_ЯΞZΛ_cdc-9ebdd1dd4e86",
-    "p_ЯΞZΛ_ssword": "c515252362b009f5",
+      "uuid": "6801db4e-76d9-4a3e-acdc-9ebdd1dd4e86",
+    "password": "c515252362b009f5",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_10",
+      "tag": "_𝓇𝑒𝓏𝒶_10",
       "type": "tuic"
     },
   {
       "server": "147.45.76.116",
       "server_port": 54833,
-      "uuid": "eec22c1c-2e37-4c66-b7_ЯΞZΛ_9-41cf43033070",
-    "p_ЯΞZΛ_ssword": "3e53ddf7839c5112",
+      "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
+    "password": "3e53ddf7839c5112",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_11",
+      "tag": "_𝓇𝑒𝓏𝒶_11",
       "type": "tuic"
     },
   {
-      "server": "[2_ЯΞZΛ_12:5940:42d8::2]",
+      "server": "[2a12:5940:42d8::2]",
       "server_port": 54833,
-      "uuid": "eec22c1c-2e37-4c66-b7_ЯΞZΛ_9-41cf43033070",
-    "p_ЯΞZΛ_ssword": "3e53ddf7839c5112",
+      "uuid": "eec22c1c-2e37-4c66-b7a9-41cf43033070",
+    "password": "3e53ddf7839c5112",
       "congestion_control": "bbr",
       "tls": {
-        "en_ЯΞZΛ_bled": true,
+        "enabled": true,
         "insecure": true,
-    "_ЯΞZΛ_lpn": [
+    "alpn": [
       "h3",
       "spdy/3.1"
     ]
       },
-      "t_ЯΞZΛ_g": "_ЯΞZΛ_12",
+      "tag": "_𝓇𝑒𝓏𝒶_12",
       "type": "tuic"
     }
   ],
   "route": {
     "geoip": {
-            "downlo_ЯΞZΛ_d_url": "https://github.com/chocol_ЯΞZΛ_te4u/Ir_ЯΞZΛ_n-sing-box-rules/rele_ЯΞZΛ_ses/l_ЯΞZΛ_test/downlo_ЯΞZΛ_d/geoip.db",
-            "downlo_ЯΞZΛ_d_detour": "direct"
+            "download_url": "https://github.com/chocolate4u/Iran-sing-box-rules/releases/latest/download/geoip.db",
+            "download_detour": "direct"
         },
         "geosite": {
-            "downlo_ЯΞZΛ_d_url": "https://github.com\/chocol_ЯΞZΛ_te4u/Ir_ЯΞZΛ_n-sing-box-rules/rele_ЯΞZΛ_ses/l_ЯΞZΛ_test/downlo_ЯΞZΛ_d/geosite.db",
-            "downlo_ЯΞZΛ_d_detour": "direct"
+            "download_url": "https://github.com\/chocolate4u/Iran-sing-box-rules/releases/latest/download/geosite.db",
+            "download_detour": "direct"
         },
     "rules": [
       {
@@ -337,15 +337,15 @@
         "outbound": "block"
       },
       {
-        "cl_ЯΞZΛ_sh_mode": "direct",
+        "clash_mode": "direct",
         "outbound": "direct"
       },
       {
-        "cl_ЯΞZΛ_sh_mode": "glob_ЯΞZΛ_l",
+        "clash_mode": "global",
         "outbound": "select"
       },
             {
-                "dom_ЯΞZΛ_in_suffix": [
+                "domain_suffix": [
                     "ir"
                 ],
                 "outbound": "direct"
@@ -353,8 +353,8 @@
             {
                 "geoip": [
                     "ir",
-                    "priv_ЯΞZΛ_te",
-                    "_ЯΞZΛ_rv_ЯΞZΛ_ncloud"
+                    "private",
+                    "arvancloud"
                 ],
                 "outbound": "direct"
             },
@@ -366,7 +366,7 @@
             },
             {
                 "geosite": [
-                    "m_ЯΞZΛ_lw_ЯΞZΛ_re",
+                    "malware",
                     "phishing",
                     "cryptominers"
                 ],
@@ -380,24 +380,24 @@
             },
             {
                 "geoip": [
-                    "m_ЯΞZΛ_lw_ЯΞZΛ_re",
+                    "malware",
                     "phishing"
                 ],
                 "outbound": "block"
             }
 
     ],
-    "_ЯΞZΛ_uto_detect_interf_ЯΞZΛ_ce": true,
-    "fin_ЯΞZΛ_l": "select"
+    "auto_detect_interface": true,
+    "final": "select"
   },
-  "experiment_ЯΞZΛ_l": {
-    "cl_ЯΞZΛ_sh__ЯΞZΛ_pi": {
-  "extern_ЯΞZΛ_l_controller": "127.0.0.1:9090",
-  "extern_ЯΞZΛ_l_ui": "",
-  "extern_ЯΞZΛ_l_ui_downlo_ЯΞZΛ_d_url": "",
-  "extern_ЯΞZΛ_l_ui_downlo_ЯΞZΛ_d_detour": "",
+  "experimental": {
+    "clash_api": {
+  "external_controller": "127.0.0.1:9090",
+  "external_ui": "",
+  "external_ui_download_url": "",
+  "external_ui_download_detour": "",
   "secret":"",
-  "def_ЯΞZΛ_ult_mode": ""
+  "default_mode": ""
 
     }
   }
